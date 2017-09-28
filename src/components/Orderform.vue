@@ -4,7 +4,7 @@
     <h1>Services</h1>
 
     <ul>
-        <li v-for="service in services" v-on:click="toggleActive(service)" v-bind:class="{ 'active': service.active}">
+        <li v-for="service in services" v-on:click="toggleActive(service.active)" v-bind:class="{'active':service.active}">
             {{service.name}} <span>{{service.price | currency}}</span>
         </li>
     </ul>
@@ -53,8 +53,8 @@ export default {
     },
   },
   methods: {
-    toggleActive(s) {
-      this.active = !s.active;
+    toggleActive(items) {
+      this.active = !items;
     },
     total() {
       let total = 0;
