@@ -5,6 +5,8 @@ import Pages from '@/components/Pages';
 import Editme from '@/components/Editme';
 import Orderform from '@/components/Orderform';
 import Search from '@/components/Search';
+import News from '@/components/News';
+import Paging from '@/components/Paging';
 
 Vue.use(Router);
 
@@ -34,6 +36,16 @@ export default new Router({
       path: '/Search',
       name: 'Search',
       component: Search,
+    },
+    {
+      path: '/News',
+      name: 'News',
+      component: News,
+    },
+    {
+      path: '/Paging',
+      name: 'Paging',
+      component: Paging,
     },
   ],
 });
