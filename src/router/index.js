@@ -7,6 +7,7 @@ import Orderform from '@/components/Orderform';
 import Search from '@/components/Search';
 import News from '@/components/News';
 import Paging from '@/components/Paging';
+import Forms from '@/components/Forms';
 
 Vue.use(Router);
 
@@ -46,6 +47,11 @@ export default new Router({
       path: '/Paging',
       name: 'Paging',
       component: Paging,
+    },
+    {
+      path: '/Forms',
+      name: 'Forms',
+      component: Forms,
     },
   ],
 });

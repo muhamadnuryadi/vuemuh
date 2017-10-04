@@ -3,8 +3,7 @@
     <div class="bar">
         <input type="text" v-model="searchString" placeholder="Enter your search terms" value=""/>
     </div>
-    <p><b>Total Data {{countarticle}}</b></p><br/>
-    <!-- <v-paginator :resource_url="resource_url" ref="vpaginator" @update="updateResource"></v-paginator> -->
+    <p><b>Total Data {{countarticle}}</b></p>
     <table class="table table-striped">
         <thead>
           <tr>
@@ -30,7 +29,23 @@ export default {
     return {
       results: [],
       searchString: '',
+      countarticle: '',
     };
+  },
+  mounted() {
+    // axios.get('https://api.nytimes.com/svc/topstories/v2/world.json?api-key=254dec44ebd8455ca44eb8d8215b5eb3').then((response) => {
+    //   this.results = response.data.results;
+    // }).catch();
+    // axios.get('https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=254dec44ebd8455ca44eb8d8215b5eb3', {
+    //   params: {
+    //     q: 'aaa',
+    //   },
+    // })
+    // .then((article) => {
+    //   console.log(article.data.response.docs);
+    //   this.results = article.data.response.docs;
+    // }).catch();
+    // return this.result;
   },
   computed: {
     filteredArticles() {
@@ -46,11 +61,6 @@ export default {
         this.countarticle = article.data.response.meta.hits;
       }).catch();
       return this.results;
-    },
-  },
-  methods: {
-    clickCallback(pageNum) {
-      console.log(pageNum);
     },
   },
 };
