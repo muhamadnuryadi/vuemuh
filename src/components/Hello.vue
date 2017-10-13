@@ -4,7 +4,6 @@
     <div v-html="compiledMarkdown"></div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -23,18 +22,21 @@ export default {
     },
   },
 };
-</script>
 
+</script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-html, body, #editor {
+html,
+body,
+#editor {
   margin: 0;
   height: 100%;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   color: #333;
 }
 
-textarea, #editor div {
+textarea,
+#editor div {
   display: inline-block;
   width: 49%;
   height: 100%;
@@ -57,4 +59,5 @@ textarea {
 code {
   color: #f66;
 }
+
 </style>

@@ -1,18 +1,16 @@
 <template>
   <div id="app" v-cloak>
-  <input type="text" v-model="searchKey">
-  <ul>
+    <input type="text" v-model="searchKey">
+    <ul>
       <li v-for="user in paginatedUsers">{{ user.name }}</li>
-  </ul>
-
-  <ul>
+    </ul>
+    <ul>
       <li v-for="pageNumber in totalPages" v-if="Math.abs(pageNumber - currentPage) < 3 || pageNumber == totalPages - 1 || pageNumber == 0">
-      <a href="#/paging" @click="setPage(pageNumber)"  :class="{current: currentPage === pageNumber, last: (pageNumber == totalPages - 1 && Math.abs(pageNumber - currentPage) > 3), first:(pageNumber == 0 && Math.abs(pageNumber - currentPage) > 3)}">{{ pageNumber }}</a>
+        <a href="#/paging" @click="setPage(pageNumber)" :class="{current: currentPage === pageNumber, last: (pageNumber == totalPages - 1 && Math.abs(pageNumber - currentPage) > 3), first:(pageNumber == 0 && Math.abs(pageNumber - currentPage) > 3)}">{{ pageNumber }}</a>
       </li>
-  </ul>
+    </ul>
   </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -73,30 +71,33 @@ export default {
     },
   },
 };
-</script>
 
+</script>
 <style>
 a {
   color: #999;
 }
+
 .current {
   color: red;
 }
+
 ul {
   padding: 0;
   list-style-type: none;
 }
+
 li {
   display: inline;
   margin: 5px 5px;
 }
 
 a.first::after {
-  content:'...'
+  content: '...'
 }
 
 a.last::before {
-  content:'...'
+  content: '...'
 }
 
 </style>

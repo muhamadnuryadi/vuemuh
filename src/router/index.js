@@ -12,46 +12,45 @@ import Forms from '@/components/Forms';
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Hello',
-      component: Hello,
-    },
-    {
-      path: '/Pages',
-      name: 'Pages',
-      component: Pages,
-    },
-    {
-      path: '/Editme',
-      name: 'Editme',
-      component: Editme,
-    },
-    {
-      path: '/Orderform',
-      name: 'Orderform',
-      component: Orderform,
-    },
-    {
-      path: '/Search',
-      name: 'Search',
-      component: Search,
-    },
-    {
-      path: '/News',
-      name: 'News',
-      component: News,
-    },
-    {
-      path: '/Paging',
-      name: 'Paging',
-      component: Paging,
-    },
-    {
-      path: '/Forms',
-      name: 'Forms',
-      component: Forms,
-    },
+  routes: [{
+    path: '/',
+    name: 'Hello',
+    component: Hello,
+  },
+  {
+    path: '/Pages',
+    name: 'Pages',
+    component: Pages,
+  },
+  {
+    path: '/Editme',
+    name: 'Editme',
+    component: Editme,
+  },
+  {
+    path: '/Orderform',
+    name: 'Orderform',
+    component: Orderform,
+  },
+  {
+    path: '/Search',
+    name: 'Search',
+    component: Search,
+  },
+  {
+    path: '/News',
+    name: 'News',
+    component: News,
+  },
+  {
+    path: '/Paging',
+    name: 'Paging',
+    component: Paging,
+  },
+  {
+    path: '/Forms',
+    name: 'Forms',
+    component: Forms,
+  },
   ],
 });
